@@ -1,0 +1,355 @@
+body {
+  margin: 0 auto; }
+  body .page-container {
+    position: relative;
+    min-height: 100vh; }
+  body .page-content {
+    padding-bottom: 150px; }
+
+@media (max-width: 1000px) {
+  body .page-container {
+    min-height: 100vh; } }
+
+header {
+  border-bottom: 3px solid #087f8c;
+  margin: 0 auto;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  max-width: 100%; }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    text-transform: capitalize; }
+    header nav .nav__left {
+      display: flex;
+      justify-content: start;
+      align-items: center; }
+      header nav .nav__left h1 {
+        text-transform: capitalize;
+        padding-left: 5px;
+        font-size: 25px; }
+      header nav .nav__left h1:hover {
+        cursor: pointer; }
+    header nav .nav__right a {
+      text-transform: capitalize;
+      color: #fff;
+      padding-left: 30px;
+      font-size: 14px;
+      text-decoration: none; }
+    header nav .nav__right a:hover {
+      cursor: pointer;
+      color: #d3d3d3; }
+    header nav .nav__right .button__sign-in {
+      background-color: #087f8c;
+      border-radius: 5px;
+      margin-left: 10px;
+      padding: 6px; }
+    header nav .nav__right .button__sign-in:hover {
+      color: #fff;
+      background-color: #095256;
+      cursor: pointer; }
+  header .input {
+    padding-top: 75px;
+    max-width: 1000px;
+    margin: 0 auto; }
+    header .input input {
+      margin: 0 auto;
+      display: flex;
+      width: 700px;
+      border-radius: 5px;
+      padding: 9px;
+      border: 10px solid #fff;
+      font-size: 18px;
+      background-image: url("/assets/images/search.svg");
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 35px 35px;
+      text-indent: 30px; }
+    header .input input:focus {
+      outline: none; }
+
+@media (max-width: 950px) {
+  header .input {
+    margin: 0 auto;
+    max-width: 500px; }
+    header .input input {
+      width: 300px; } }
+
+.current-weather {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  max-height: 500px;
+  margin: 0 auto; }
+  .current-weather h1 {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700; }
+  .current-weather .current__container {
+    border: 1px solid #dedede;
+    box-shadow: 5px 8px 6px #dedede;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 700px;
+    max-height: 275px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between; }
+    .current-weather .current__container .current-left-container {
+      max-width: 350px;
+      display: flex;
+      justify-content: flex-start;
+      padding: 20px; }
+      .current-weather .current__container .current-left-container .current__title {
+        justify-content: flex-start; }
+        .current-weather .current__container .current-left-container .current__title h1 {
+          font-size: 18px;
+          font-weight: 700;
+          font-family: Helvetica, sans-serif;
+          text-transform: capitalize;
+          margin: 1px; }
+        .current-weather .current__container .current-left-container .current__title p {
+          font-family: Helvetica, sans-serif;
+          color: #7c7c7c;
+          font-size: 14px;
+          margin: 1px; }
+        .current-weather .current__container .current-left-container .current__title .current__weather {
+          display: flex; }
+          .current-weather .current__container .current-left-container .current__title .current__weather .weather__icon {
+            padding-top: 30px; }
+          .current-weather .current__container .current-left-container .current__title .current__weather .weather__info {
+            padding-top: 30px; }
+            .current-weather .current__container .current-left-container .current__title .current__weather .weather__info h1 {
+              font-weight: 400;
+              font-family: Helvetica, sans-serif;
+              text-transform: capitalize;
+              font-size: 80px;
+              margin: 5px; }
+              .current-weather .current__container .current-left-container .current__title .current__weather .weather__info h1 span {
+                font-weight: 400;
+                font-family: Helvetica, sans-serif;
+                font-size: 50px;
+                color: #7c7c7c; }
+            .current-weather .current__container .current-left-container .current__title .current__weather .weather__info h2 {
+              padding-left: 10px;
+              margin-top: -15px;
+              font-weight: 400;
+              font-family: Helvetica, sans-serif;
+              font-size: 24px; }
+        .current-weather .current__container .current-left-container .current__title .weather__details h4 {
+          margin: 10px;
+          font-family: Helvetica, sans-serif;
+          font-weight: 200;
+          font-size: 18px; }
+    .current-weather .current__container .current-right-container {
+      padding: 20px;
+      max-width: 350px; }
+      .current-weather .current__container .current-right-container .current__info {
+        width: 300px; }
+        .current-weather .current__container .current-right-container .current__info .shade {
+          border-bottom: 1px solid #dedede;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: Helvetica, sans-serif; }
+          .current-weather .current__container .current-right-container .current__info .shade h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px; }
+          .current-weather .current__container .current-right-container .current__info .shade p {
+            font-size: 18px;
+            margin-bottom: 5px; }
+        .current-weather .current__container .current-right-container .current__info .air {
+          border-bottom: 1px solid #dedede;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-family: Helvetica, sans-serif; }
+          .current-weather .current__container .current-right-container .current__info .air h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px; }
+          .current-weather .current__container .current-right-container .current__info .air p {
+            font-size: 18px;
+            margin-bottom: 5px; }
+        .current-weather .current__container .current-right-container .current__info .wind {
+          border-bottom: 1px solid #dedede;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-family: Helvetica, sans-serif; }
+          .current-weather .current__container .current-right-container .current__info .wind h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px; }
+          .current-weather .current__container .current-right-container .current__info .wind p {
+            font-size: 18px;
+            margin-bottom: 5px; }
+        .current-weather .current__container .current-right-container .current__info .wind-gusts {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-family: Helvetica, sans-serif; }
+          .current-weather .current__container .current-right-container .current__info .wind-gusts h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 5px; }
+          .current-weather .current__container .current-right-container .current__info .wind-gusts p {
+            font-size: 18px;
+            margin-bottom: 5px; }
+
+@media (max-width: 950px) {
+  .current-weather {
+    max-height: 850px; }
+    .current-weather .current__container {
+      flex-direction: column;
+      max-width: 400px;
+      max-height: 500px;
+      margin-bottom: 50px; }
+      .current-weather .current__container .current-right-container {
+        margin: 0 auto; }
+      .current-weather .current__container .current-left-container {
+        margin: 0 auto; }
+        .current-weather .current__container .current-left-container .current__title .current__weather .current__info h1 {
+          font-size: 50px; } }
+
+.days {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  margin-bottom: 50px;
+  padding-bottom: 100px;
+  display: none;
+  margin-top: 50px; }
+  .days h1 {
+    margin-top: 0px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700; }
+  .days .days__container {
+    background-color: #fff;
+    align-items: center;
+    width: 950px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    .days .days__container .day__container {
+      border: 1px solid #dedede;
+      box-shadow: 5px 8px 6px #dedede;
+      background-color: #fff;
+      border-radius: 5px;
+      max-width: 150px;
+      max-height: 350px;
+      padding: 20px;
+      margin-left: 10px; }
+      .days .days__container .day__container .day__title h1 {
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        text-transform: capitalize;
+        margin: 1px; }
+      .days .days__container .day__container .day__title p {
+        margin: 0 auto;
+        text-align: center;
+        font-family: Helvetica, sans-serif;
+        color: #7e7e7e; }
+      .days .days__container .day__container .weather__info {
+        margin: 0 auto;
+        text-align: center; }
+        .days .days__container .day__container .weather__info h1 {
+          font-family: Helvetica, sans-serif;
+          text-align: center;
+          font-size: 50px;
+          margin: 5px; }
+          .days .days__container .day__container .weather__info h1 span {
+            color: #7e7e7e;
+            font-size: 24px; }
+        .days .days__container .day__container .weather__info h4 {
+          font-family: Helvetica, sans-serif;
+          text-align: center;
+          margin: 5px; }
+      .days .days__container .day__container .weather__details {
+        padding-top: 20px; }
+        .days .days__container .day__container .weather__details h4 {
+          font-weight: 200;
+          font-family: Helvetica, sans-serif;
+          text-align: center;
+          margin: 5px;
+          font-size: 20px; }
+
+@media (max-width: 1010px) {
+  .days {
+    margin-bottom: 30px;
+    margin: 0 auto; }
+    .days .days__container {
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      flex-direction: column; }
+      .days .days__container .day__container {
+        margin: 0 auto;
+        padding: 50px;
+        max-width: 400px;
+        max-height: 300px;
+        margin-bottom: 15px; } }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 50px;
+  background: black;
+  background: linear-gradient(0deg, black 0%, #095256 100%);
+  height: 150px;
+  max-width: 100%; }
+  footer .footer__top {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    footer .footer__top .footer__left {
+      margin: 0 auto; }
+      footer .footer__top .footer__left .logo {
+        display: flex;
+        align-items: center;
+        font-family: Helvetica, sans-serif; }
+        footer .footer__top .footer__left .logo h1 {
+          color: #fff;
+          padding-left: 5px;
+          font-size: 25px; }
+        footer .footer__top .footer__left .logo h1:hover {
+          cursor: pointer; }
+    footer .footer__top .border-bottom {
+      padding-top: 15px;
+      border-bottom: 1px solid #fff;
+      width: 90%;
+      margin: 0 auto; }
+  footer .footer__bottom {
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 1000px; }
+    footer .footer__bottom p {
+      text-align: center;
+      font-family: Helvetica, sans-serif;
+      color: #dcdcdc; }

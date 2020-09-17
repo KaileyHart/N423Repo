@@ -1,0 +1,19 @@
+{
+  "Users": [
+    {
+      "name": "Kailey",
+      "grade": "Senior",
+      "Classes": [{ "className": "115" }, { "className": "215" }]
+    },
+    {
+      "name": "Kailey",
+      "grade": "Senior",
+      "Classes": [{ "className": "115" }, { "className": "215" }]
+    },
+    {
+      "name": "Kailey",
+      "grade": "Senior",
+      "Classes": [{ "className": "115" }, { "className": "215" }]
+    }
+  ]
+}

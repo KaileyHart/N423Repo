@@ -1,0 +1,106 @@
+header {
+  border-bottom: 3px solid #087f8c;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //height: 385px;
+  height: 100vh;
+  max-width: 100%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    text-transform: capitalize;
+    .nav__left {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      h1 {
+        text-transform: capitalize;
+        padding-left: 5px;
+        font-size: 25px;
+      }
+      h1:hover {
+        cursor: pointer;
+      }
+    }
+    .nav__right {
+      a {
+        text-transform: capitalize;
+        color: #fff;
+        padding-left: 30px;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+        color: #d3d3d3;
+      }
+      .button__sign-in {
+        background-color: #087f8c;
+        border-radius: 5px;
+        margin-left: 10px;
+        padding: 6px;
+      }
+      .button__sign-in:hover {
+        color: #fff;
+        background-color: #095256;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .input {
+    padding-top: 75px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    input {
+      margin: 0 auto;
+      display: flex;
+      width: 700px;
+      border-radius: 5px;
+      padding: 9px;
+      border: 10px solid #fff;
+      font-size: 18px;
+      background-image: url("/assets/images/search.svg");
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 35px 35px;
+      text-indent: 30px;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  header {
+    nav {
+    }
+    .input {
+      margin: 0 auto;
+      max-width: 500px;
+
+      input {
+        width: 300px;
+      }
+    }
+  }
+}
