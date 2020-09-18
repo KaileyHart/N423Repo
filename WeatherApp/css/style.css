@@ -10,7 +10,9 @@ body {
   body .page-container {
     min-height: 100vh; } }
 
-#head {
+header {
+  border-bottom: 3px solid #087f8c;
+  margin: 0 auto;
   width: 100vw;
   height: 100vh;
   background-position: center center;
@@ -19,23 +21,7 @@ body {
   backface-visibility: hidden;
   animation: headBg 30s linear infinite 0s;
   animation-timing-function: ease-in-out 15s;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/carmela-asistio-jLOhq1xMwM4-unsplash.jpg"); }
-
-@keyframes headBg {
-  0% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
-  25% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/luc-dobigeon-BdvZQL0iebM-unsplash.jpg"); }
-  50% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/dixit-chouhan-WBJLh5QfwyI-unsplash.jpg"); }
-  75% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
-  100% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg"); } }
-
-header {
-  border-bottom: 3px solid #087f8c;
-  margin: 0 auto; }
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg"); }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -105,6 +91,18 @@ header {
     max-width: 500px; }
     header .input input {
       width: 300px; } }
+
+@keyframes headBg {
+  0% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
+  25% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/luc-dobigeon-BdvZQL0iebM-unsplash.jpg"); }
+  50% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/dixit-chouhan-WBJLh5QfwyI-unsplash.jpg"); }
+  75% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
+  100% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg"); } }
 
 .current-weather {
   padding-left: 20px;
