@@ -6,6 +6,15 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
+//cloud
+layer = "clouds_new";
+z = "2";
+x = "2";
+y = "2";
+//Map API
+mapAPI = `https://tile.openweathermap.org/map/${layer}/${z}/${x}/${y}.png?appid=${api.key}`;
+console.log(mapAPI);
+
 let setQuery = () => {
   $("#input").change(function () {
     (e) => setQuery(e.target.value);
@@ -63,8 +72,12 @@ function search() {
 
           //////CURRENT WEATHER///////
           //weather = weather.main.temp;
-          $("#location").html(setWeather.city.name);
-          $("#location2").html(setWeather.city.name);
+          $("#location").html(
+            setWeather.city.name + ", " + setWeather.city.country
+          );
+          $("#location2").html(
+            setWeather.city.name + ", " + setWeather.city.country
+          );
           $("#currentTime").html(time);
 
           //Displays the temperature
@@ -312,7 +325,7 @@ function search() {
           document.getElementById("head").style.height = "100vh";
           console.log(err);
           swal(
-            "Sorry, that didn't quite work. Try writing the name of your city or zip code again. Make sure that you are not using any special characters including commas, periods, and spaces."
+            "Sorry, we don't recognize that location. Try writing the name of your city or zip code again."
           );
         });
     }

@@ -10,22 +10,42 @@ body {
   body .page-container {
     min-height: 100vh; } }
 
+#head {
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: headBg 30s linear infinite 0s;
+  animation-timing-function: ease-in-out 15s;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/carmela-asistio-jLOhq1xMwM4-unsplash.jpg"); }
+
+@keyframes headBg {
+  0% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
+  25% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/luc-dobigeon-BdvZQL0iebM-unsplash.jpg"); }
+  50% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/dixit-chouhan-WBJLh5QfwyI-unsplash.jpg"); }
+  75% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
+  100% {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg"); } }
+
 header {
   border-bottom: 3px solid #087f8c;
-  margin: 0 auto;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  max-width: 100%; }
+  margin: 0 auto; }
   header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: transparent;
     font-family: Helvetica, sans-serif;
     color: #fff;
@@ -41,6 +61,7 @@ header {
       header nav .nav__left h1:hover {
         cursor: pointer; }
     header nav .nav__right a {
+      padding-right: 10px;
       text-transform: capitalize;
       color: #fff;
       padding-left: 30px;
@@ -52,7 +73,7 @@ header {
     header nav .nav__right .button__sign-in {
       background-color: #087f8c;
       border-radius: 5px;
-      margin-left: 10px;
+      margin-left: 5px;
       padding: 6px; }
     header nav .nav__right .button__sign-in:hover {
       color: #fff;
@@ -249,7 +270,7 @@ header {
   .days .days__container {
     background-color: #fff;
     align-items: center;
-    width: 950px;
+    width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
@@ -258,8 +279,8 @@ header {
       box-shadow: 5px 8px 6px #dedede;
       background-color: #fff;
       border-radius: 5px;
-      max-width: 150px;
-      max-height: 350px;
+      width: 160px;
+      height: 350px;
       padding: 20px;
       margin-left: 10px; }
       .days .days__container .day__container .day__title h1 {
@@ -309,10 +330,11 @@ header {
         margin: 0 auto;
         padding: 50px;
         max-width: 400px;
-        max-height: 300px;
+        height: 350px;
         margin-bottom: 15px; } }
 
 footer {
+  padding-bottom: 40px;
   position: absolute;
   bottom: 0;
   width: 100%;
