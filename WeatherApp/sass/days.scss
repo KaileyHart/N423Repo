@@ -9,7 +9,7 @@
 
   h1 {
     margin-top: 0px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     font-family: Helvetica, sans-serif;
     margin-bottom: 20px;
@@ -20,13 +20,13 @@
   .days__container {
     background-color: #fff;
     align-items: center;
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 
     .day__container {
-      border: 1px solid #dedede;
+      border: 2px solid #dedede;
       box-shadow: 5px 8px 6px #dedede;
       background-color: #fff;
       border-radius: 5px;
@@ -70,11 +70,21 @@
           text-align: center;
           margin: 5px;
         }
+        h5 {
+          border-top: 1px solid #7e7e7e;
+          font-weight: 400;
+          font-family: Helvetica, sans-serif;
+          text-align: center;
+          margin: 5px;
+          font-size: 14px;
+          padding-top: 10px;
+          color: #000;
+        }
       }
       .weather__details {
         padding-top: 20px;
         h4 {
-          font-weight: 200;
+          font-weight: 700;
           font-family: Helvetica, sans-serif;
           text-align: center;
           margin: 5px;

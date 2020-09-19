@@ -4,18 +4,18 @@ header {
 
   width: 100vw;
   height: 100vh;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  backface-visibility: hidden;
-  animation: headBg 30s linear infinite 0s;
-  animation-timing-function: ease-in-out 15s;
+  //backface-visibility: hidden;
+  //animation: headBg 30s linear infinite 0s;
+  //animation-timing-function: ease-in-out 15s;
   background-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg");
+    url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
 
   // background-position: center;
   // background-repeat: no-repeat;
@@ -118,49 +118,50 @@ header {
   }
 }
 
-@keyframes headBg {
-  0% {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
-  }
+//Rotating images animation in the header background-> says can't find imgs when uploaded to github
+// @keyframes headBg {
+//   0% {
+//     background-image: linear-gradient(
+//         to left,
+//         rgba(0, 0, 0, 0.5),
+//         rgba(0, 0, 0, 0.5)
+//       ),
+//       url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
+//   }
 
-  25% {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("/assets/images/luc-dobigeon-BdvZQL0iebM-unsplash.jpg");
-  }
+//   25% {
+//     background-image: linear-gradient(
+//         to left,
+//         rgba(0, 0, 0, 0.5),
+//         rgba(0, 0, 0, 0.5)
+//       ),
+//       url("/assets/images/luc-dobigeon-BdvZQL0iebM-unsplash.jpg");
+//   }
 
-  50% {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("/assets/images/dixit-chouhan-WBJLh5QfwyI-unsplash.jpg");
-  }
+//   50% {
+//     background-image: linear-gradient(
+//         to left,
+//         rgba(0, 0, 0, 0.5),
+//         rgba(0, 0, 0, 0.5)
+//       ),
+//       url("/assets/images/dixit-chouhan-WBJLh5QfwyI-unsplash.jpg");
+//   }
 
-  75% {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
-  }
+//   75% {
+//     background-image: linear-gradient(
+//         to left,
+//         rgba(0, 0, 0, 0.5),
+//         rgba(0, 0, 0, 0.5)
+//       ),
+//       url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
+//   }
 
-  100% {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg");
-  }
-}
+//   100% {
+//     background-image: linear-gradient(
+//         to left,
+//         rgba(0, 0, 0, 0.5),
+//         rgba(0, 0, 0, 0.5)
+//       ),
+//       url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg");
+//   }
+// }

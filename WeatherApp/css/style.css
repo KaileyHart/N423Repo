@@ -15,13 +15,10 @@ header {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  backface-visibility: hidden;
-  animation: headBg 30s linear infinite 0s;
-  animation-timing-function: ease-in-out 15s;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg"); }
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -92,18 +89,6 @@ header {
     header .input input {
       width: 300px; } }
 
-@keyframes headBg {
-  0% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
-  25% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/luc-dobigeon-BdvZQL0iebM-unsplash.jpg"); }
-  50% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/dixit-chouhan-WBJLh5QfwyI-unsplash.jpg"); }
-  75% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
-  100% {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/johny-goerend-urARpRPyWe8-unsplash.jpg"); } }
-
 .current-weather {
   padding-left: 20px;
   padding-right: 20px;
@@ -121,7 +106,7 @@ header {
     font-size: 30px;
     font-weight: 700; }
   .current-weather .current__container {
-    border: 1px solid #dedede;
+    border: 2px solid #dedede;
     box-shadow: 5px 8px 6px #dedede;
     background-color: #fff;
     border-radius: 5px;
@@ -259,7 +244,7 @@ header {
   margin-top: 50px; }
   .days h1 {
     margin-top: 0px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     font-family: Helvetica, sans-serif;
     margin-bottom: 20px;
@@ -268,12 +253,12 @@ header {
   .days .days__container {
     background-color: #fff;
     align-items: center;
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between; }
     .days .days__container .day__container {
-      border: 1px solid #dedede;
+      border: 2px solid #dedede;
       box-shadow: 5px 8px 6px #dedede;
       background-color: #fff;
       border-radius: 5px;
@@ -306,10 +291,19 @@ header {
           font-family: Helvetica, sans-serif;
           text-align: center;
           margin: 5px; }
+        .days .days__container .day__container .weather__info h5 {
+          border-top: 1px solid #7e7e7e;
+          font-weight: 400;
+          font-family: Helvetica, sans-serif;
+          text-align: center;
+          margin: 5px;
+          font-size: 14px;
+          padding-top: 10px;
+          color: #000; }
       .days .days__container .day__container .weather__details {
         padding-top: 20px; }
         .days .days__container .day__container .weather__details h4 {
-          font-weight: 200;
+          font-weight: 700;
           font-family: Helvetica, sans-serif;
           text-align: center;
           margin: 5px;
@@ -332,16 +326,15 @@ header {
         margin-bottom: 15px; } }
 
 footer {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   margin-top: 50px;
-  padding-top: 50px;
+  padding-top: 20px;
   background: black;
   background: linear-gradient(0deg, black 0%, #095256 100%);
-  height: 150px;
-  max-width: 100%; }
+  height: 150px; }
   footer .footer__top {
     margin: 0 auto;
     max-width: 1000px;

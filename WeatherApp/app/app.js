@@ -33,24 +33,6 @@ let day3 = dt.getMonth() + 1 + "/" + (dt.getDate() + 3);
 let day4 = dt.getMonth() + 1 + "/" + (dt.getDate() + 4);
 let day5 = dt.getMonth() + 1 + "/" + (dt.getDate() + 5);
 
-let weekday = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let weekday2 = weekday[dt.getDay() + 1];
-let weekday3 = weekday[dt.getDay() + 2];
-
-//Doesn't let you add another day?
-let weekday4 = weekday[dt.getDay() + 3];
-let weekday5 = weekday[dt.getDay() + 4];
-let weekday6 = weekday[dt.getDay() + 5];
-
 //Allows user to search for a location/zip
 function search() {
   $("#input").on("keypress", function (e) {
@@ -125,8 +107,6 @@ function search() {
           );
 
           /////FORECAST FOR DAY 1 /////
-          //Displays the day name
-          $("#weekday2").html(weekday2);
 
           //Displays the Date
           $(".day-date").html(day1);
@@ -163,9 +143,15 @@ function search() {
           //Displays description of weather
           $("#description-2").html(setWeather.list[1].weather[0].description);
 
+          //Humidity
+          $("#humidity2").html(
+            "Humidity: " + setWeather.list[1].main.humidity + "%"
+          );
+
+          //Wind Speed
+          $("#wind2").html("Wind: " + setWeather.list[1].wind.speed + "mph");
+
           /////FORECAST FOR DAY 2 /////
-          //Displays the day name
-          $("#weekday3").html(weekday3);
 
           //Displays the Date
           $(".day-date2").html(day2);
@@ -202,9 +188,15 @@ function search() {
           //Displays description of weather
           $("#description-3").html(setWeather.list[2].weather[0].description);
 
+          //Humidity
+          $("#humidity3").html(
+            "Humidity: " + setWeather.list[2].main.humidity + "%"
+          );
+
+          //Wind Speed
+          $("#wind3").html("Wind: " + setWeather.list[2].wind.speed + "mph");
+
           /////FORECAST FOR DAY 3 /////
-          //Displays the day name
-          $("#weekday4").html(weekday4);
 
           //Displays the Date
           $(".day-date3").html(day3);
@@ -241,9 +233,15 @@ function search() {
           //Displays description of weather
           $("#description-4").html(setWeather.list[3].weather[0].description);
 
+          //Humidity
+          $("#humidity4").html(
+            "Humidity: " + setWeather.list[3].main.humidity + "%"
+          );
+
+          //Wind Speed
+          $("#wind4").html("Wind: " + setWeather.list[3].wind.speed + "mph");
+
           /////FORECAST FOR DAY 4 /////
-          //Displays the day name
-          $("#weekday5").html(weekday5);
 
           //Displays the Date
           $(".day-date4").html(day4);
@@ -280,9 +278,15 @@ function search() {
           //Displays description of weather
           $("#description-5").html(setWeather.list[4].weather[0].description);
 
+          //Humidity
+          $("#humidity5").html(
+            "Humidity: " + setWeather.list[4].main.humidity + "%"
+          );
+
+          //Wind Speed
+          $("#wind5").html("Wind: " + setWeather.list[4].wind.speed + "mph");
+
           /////FORECAST FOR DAY 5 /////
-          //Displays the day name
-          $("#weekday6").html(weekday6);
 
           //Displays the Date
           $(".day-date5").html(day5);
@@ -318,6 +322,14 @@ function search() {
 
           //Displays description of weather
           $("#description-6").html(setWeather.list[5].weather[0].description);
+
+          //Humidity
+          $("#humidity6").html(
+            "Humidity: " + setWeather.list[5].main.humidity + "%"
+          );
+
+          //Wind Speed
+          $("#wind6").html("Wind: " + setWeather.list[5].wind.speed + "mph");
         })
         .catch((err) => {
           document.getElementById("current").style.display = "none";
