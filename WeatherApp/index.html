@@ -45,9 +45,23 @@
           </section>
         </header>
 
+        <section id="secondNav" class="secondNav">
+          <div class="secondNav__links">
+            <a href="#today" class="active" onclick="todayClicked()" id="today"
+              >TODAY</a
+            >
+            <a id="tomorrow-active" href="#tomorrow" onclick="tomorrowClicked()"
+              >TOMORROW</a
+            >
+            <a id="fivedays" href="#fivedays" onclick="fiveDayClicked()"
+              >5 DAYS</a
+            >
+          </div>
+        </section>
+
         <section id="current" class="current-weather">
           <h1>
-            <b>Current Weather in: <span id="location"> </span></b>
+            <b>Today's Weather in: <span id="location"> </span></b>
             <!--${api.base}weather?q=${query}&units=metric&APPID=${api.key}-->
           </h1>
           <div class="current__container">
@@ -93,8 +107,57 @@
           </div>
         </section>
 
+        <!--TOMORROWS WEATHER-->
+        <section id="tomorrow" class="current-weather">
+          <h1>
+            <b>Tomorrow's Weather in: </b><span id="tom__location"> </span>
+            <!--${api.base}weather?q=${query}&units=metric&APPID=${api.key}-->
+          </h1>
+          <div class="current__container">
+            <div class="current-left-container">
+              <div class="current__title">
+                <h1>TOMORROW'S WEATHER</h1>
+
+                <div class="current__weather">
+                  <div class="weather__icon" id="tom__icon"></div>
+                  <div class="weather__info">
+                    <h1 id="tom__temp"></h1>
+
+                    <h2 class="realfeel" id="tom__realfeel"></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="current-right-container">
+              <div class="current__info">
+                <div class="shade">
+                  <h2>RealFeel Shade™</h2>
+                  <p id="tom__shade"></p>
+                </div>
+
+                <div class="air">
+                  <h2>Humidity</h2>
+                  <p id="tom__humidity"></p>
+                </div>
+
+                <div class="wind">
+                  <h2>Wind</h2>
+                  <p id="tom__wind"></p>
+                </div>
+
+                <div class="wind-gusts">
+                  <h2>Description</h2>
+                  <p id="tom__description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="days" class="days">
-          <h1>Five Day Forecast in: <span id="location2"> </span></h1>
+          <h1 id="days__title">
+            Five Day Forecast in: <span id="location2"> </span>
+          </h1>
           <div class="days__container">
             <!--Day 1-->
             <div class="day__container">

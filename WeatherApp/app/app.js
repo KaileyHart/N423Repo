@@ -38,9 +38,18 @@ function search() {
   $("#input").on("keypress", function (e) {
     let query = $("input").val();
     if (e.key === "Enter" || e.keyCode === 13) {
+      //Makes TODAY the active link
+      $("#tomorrow-active").removeClass("active");
+      $("#today").addClass("active");
+      $("#fivedays").removeClass("active");
+
+      //Hides second Nav till user hits enter
+      document.getElementById("secondNav").style.display = "block";
       //Hides Weather until user inputs
       document.getElementById("current").style.display = "block";
-      document.getElementById("days").style.display = "block";
+      document.getElementById("days").style.display = "none";
+
+      document.getElementById("tomorrow").style.display = "none";
       document.getElementById("head").style.height = "385px";
       // document.getElementById("footer").style.display = "block";
 
@@ -104,6 +113,56 @@ function search() {
           $(".weather__icon").html(
             `<img height="100px"
              src="http://openweathermap.org/img/wn/${icon}@2x.png" />`
+          );
+
+          //////TOMORROWS WEATHER///////
+          $("#tom__location").html(
+            setWeather.city.name + ", " + setWeather.city.country
+          );
+          //Displays the temperature
+          $("#tom__temp").html(
+            Math.round((setWeather.list[1].main.temp - 273.15) * 1.8 + 32) +
+              "°" +
+              ` <span>F</span>`
+          );
+
+          //Displays the 'realfeel'
+          $("#tom__realfeel").html(
+            "RealFeel® " +
+              Math.round(
+                (setWeather.list[1].main.feels_like - 273.15) * 1.8 + 32
+              ) +
+              "°"
+          );
+
+          //Displays the 'realfeel' shade w/o words
+          $("#tom__shade").html(
+            Math.round(
+              (setWeather.list[1].main.feels_like - 273.15) * 1.8 + 32 - 5
+            ) + "°"
+          );
+
+          //Displays the humidity
+          $("#tom__humidity").html(setWeather.list[1].main.humidity + "%");
+
+          //Displays wind speed
+          $("#tom__wind").html(setWeather.list[1].wind.speed + " mph");
+
+          //Displays description of weather
+          $("#tom__description").html(
+            setWeather.list[1].weather[0].description
+          );
+
+          //displays weather icon
+          let tom__icon = setWeather.list[1].weather[0].icon;
+
+          let tom__img = $("#tom__icon").html(
+            `http://openweathermap.org/img/wn/${tom__icon}@2x.png`
+          );
+
+          $("#tom__icon").html(
+            `<img height="100px"
+             src="http://openweathermap.org/img/wn/${tom__icon}@2x.png" />`
           );
 
           /////FORECAST FOR DAY 1 /////
@@ -362,6 +421,37 @@ function logIn() {
 
     document.getElementById("logIn").style.display = "none";
   }
+}
+
+function todayClicked() {
+  $("#tomorrow-active").removeClass("active");
+  $("#today").addClass("active");
+  $("#fivedays").removeClass("active");
+
+  document.getElementById("current").style.display = "block";
+  document.getElementById("days").style.display = "none";
+  document.getElementById("tomorrow").style.display = "none";
+}
+
+function tomorrowClicked() {
+  console.log("clicked");
+  $("#tomorrow-active").addClass("active");
+  $("#today").removeClass("active");
+  $("#fivedays").removeClass("active");
+
+  document.getElementById("tomorrow").style.display = "block";
+  document.getElementById("current").style.display = "none";
+  document.getElementById("days").style.display = "none";
+}
+
+function fiveDayClicked() {
+  $("#tomorrow-active").removeClass("active");
+  $("#today").removeClass("active");
+  $("#fivedays").addClass("active");
+
+  document.getElementById("days").style.display = "block";
+  document.getElementById("current").style.display = "none";
+  document.getElementById("tomorrow").style.display = "none";
 }
 
 $(document).ready(function () {
