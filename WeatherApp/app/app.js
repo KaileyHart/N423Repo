@@ -33,6 +33,32 @@ let day3 = dt.getMonth() + 1 + "/" + (dt.getDate() + 3);
 let day4 = dt.getMonth() + 1 + "/" + (dt.getDate() + 4);
 let day5 = dt.getMonth() + 1 + "/" + (dt.getDate() + 5);
 
+//Mobile Navigation
+function mobile() {
+  let mobile = document.getElementById("mobile");
+  let iconClose = document.getElementById("icon-close");
+  let icon = document.getElementById("icon");
+  let navBackground = document.getElementById("nav");
+  let logo = document.getElementById("nav__left");
+  let nav = document.getElementById("nav__right-mobile");
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+    logo.style.display = "flex";
+    navBackground.style.backgroundColor = "transparent";
+    mobile.style.justifyContent = "space-between";
+    icon.style.display = "flex";
+    iconClose.style.display = "none";
+  } else {
+    mobile.style.flexDirection = "none";
+
+    navBackground.style.backgroundColor = "#087f8c";
+    nav.style.display = "flex";
+    logo.style.display = "none";
+    icon.style.display = "none";
+    iconClose.style.display = "flex";
+  }
+}
+
 //Allows user to search for a location/zip
 function search() {
   $("#input").on("keypress", function (e) {

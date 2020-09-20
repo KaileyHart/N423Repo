@@ -4,22 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+
     <link rel="stylesheet" href="css/style.css" />
     <script src="lib/jquery-3.5.1.min.js"></script>
     <script src="app/app.js"></script>
+    <!--Sweet Alerts-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--Font Awesome-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/b048c1fea1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Tab Favicon-->
     <link rel="icon" type="image/png" href="./assets/logo/location.svg" />
   </head>
   <body>
     <div class="page-container">
       <div class="page-content">
         <header id="head">
-          <nav>
-            <div class="nav__left">
+          <nav id="nav">
+            <div id="nav__left" class="nav__left">
               <img
                 src="assets/logo/location.svg"
                 alt="Weather App Logo"
@@ -32,6 +41,30 @@
               <a onclick="signUp()" id="signUp" class="button__sign-in"
                 >SIGN UP</a
               >
+            </div>
+            <div id="mobile" class="mobile">
+              <a
+                href="javascript:void(0);"
+                id="icon"
+                class="icon"
+                onclick="mobile()"
+              >
+                <i class="fa fa-bars"></i>
+              </a>
+              <a
+                href="javascript:void(0);"
+                id="icon-close"
+                class="icon-close"
+                onclick="mobile()"
+              >
+                <i class="far fa-window-close"></i>
+              </a>
+              <div id="nav__right-mobile" class="nav__right-mobile">
+                <a onclick="logIn()" id="logIn">LOG IN</a>
+                <a onclick="signUp()" id="signUp" class="button__sign-in"
+                  >SIGN UP</a
+                >
+              </div>
             </div>
           </nav>
 

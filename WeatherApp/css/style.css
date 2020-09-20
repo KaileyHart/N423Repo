@@ -27,7 +27,8 @@ header {
   background-size: cover;
   height: 385px;
   height: 100vh;
-  max-width: 100%; }
+  max-width: 100%;
+  margin: 0 auto; }
   header nav {
     display: flex;
     justify-content: space-between;
@@ -35,13 +36,12 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 20px;
-    padding-right: 40px;
+    padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: transparent;
     font-family: Helvetica, sans-serif;
-    color: #fff;
-    text-transform: capitalize; }
+    color: #fff; }
     header nav .nav__left {
       display: flex;
       justify-content: start;
@@ -52,25 +52,89 @@ header {
         font-size: 25px; }
       header nav .nav__left h1:hover {
         cursor: pointer; }
-    header nav .nav__right a {
-      padding-right: 10px;
-      text-transform: capitalize;
+    header nav .nav__right {
+      display: block; }
+      header nav .nav__right a {
+        padding-right: 10px;
+        text-transform: capitalize;
+        color: #fff;
+        padding-left: 30px;
+        font-size: 14px;
+        text-decoration: none; }
+      header nav .nav__right a:hover {
+        cursor: pointer;
+        color: #d3d3d3; }
+      header nav .nav__right .button__sign-in {
+        background-color: #087f8c;
+        border-radius: 5px;
+        margin-left: 5px;
+        padding: 6px; }
+      header nav .nav__right .button__sign-in:hover {
+        color: #fff;
+        background-color: #095256;
+        cursor: pointer; }
+    header nav .mobile {
+      width: 50%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: transparent;
+      font-family: Helvetica, sans-serif;
       color: #fff;
-      padding-left: 30px;
-      font-size: 14px;
-      text-decoration: none; }
-    header nav .nav__right a:hover {
-      cursor: pointer;
-      color: #d3d3d3; }
-    header nav .nav__right .button__sign-in {
-      background-color: #087f8c;
-      border-radius: 5px;
-      margin-left: 5px;
-      padding: 6px; }
-    header nav .nav__right .button__sign-in:hover {
-      color: #fff;
-      background-color: #095256;
-      cursor: pointer; }
+      text-transform: capitalize; }
+      header nav .mobile .nav__left-mobile {
+        display: flex;
+        justify-content: start;
+        align-items: center; }
+        header nav .mobile .nav__left-mobile h1 {
+          text-transform: capitalize;
+          padding-left: 5px;
+          font-size: 25px; }
+        header nav .mobile .nav__left-mobile h1:hover {
+          cursor: pointer; }
+      header nav .mobile .fa .fa-bars {
+        color: #fff; }
+      header nav .mobile .icon {
+        color: #fff;
+        background: transparent;
+        display: block;
+        font-size: 30px; }
+      header nav .mobile .far .fa-window-close {
+        color: #fff; }
+      header nav .mobile .icon-close {
+        color: #fff;
+        background: transparent;
+        display: none;
+        font-size: 30px; }
+      header nav .mobile .nav__right-mobile {
+        flex-direction: column;
+        display: none;
+        width: 100vw;
+        height: 100px; }
+        header nav .mobile .nav__right-mobile #logIn {
+          padding-top: 10px; }
+        header nav .mobile .nav__right-mobile a {
+          width: 100%;
+          text-align: center;
+          padding-top: 20px;
+          text-transform: capitalize;
+          color: #fff;
+          font-size: 14px;
+          text-decoration: none;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 10px; }
+        header nav .mobile .nav__right-mobile a:hover {
+          cursor: pointer;
+          color: #d3d3d3; }
+        header nav .mobile .nav__right-mobile .button__sign-in {
+          background-color: #087f8c; }
+        header nav .mobile .nav__right-mobile .button__sign-in:hover {
+          color: #fff;
+          background-color: #095256;
+          cursor: pointer; }
   header .input {
     padding-top: 75px;
     max-width: 1000px;
@@ -92,11 +156,34 @@ header {
       outline: none; }
 
 @media (max-width: 950px) {
+  header nav {
+    padding-right: 20px; }
   header .input {
     margin: 0 auto;
     max-width: 500px; }
     header .input input {
       width: 300px; } }
+
+@media (max-width: 500px) {
+  header {
+    animation: none;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg"); }
+    header nav .nav__right {
+      display: none; }
+    header nav .mobile {
+      display: flex;
+      flex-direction: column; }
+      header nav .mobile .icon-close .far .fa-window-close {
+        display: none; }
+      header nav .mobile .nav__right-mobile {
+        display: none;
+        width: 100%; }
+    header .input {
+      margin: 0 auto;
+      max-width: 400px; }
+      header .input input {
+        width: 200px;
+        padding-right: 30px; } }
 
 @keyframes headBg {
   0% {

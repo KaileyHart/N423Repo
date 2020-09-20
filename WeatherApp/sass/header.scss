@@ -23,6 +23,7 @@ header {
   height: 385px;
   height: 100vh;
   max-width: 100%;
+  margin: 0 auto;
 
   nav {
     display: flex;
@@ -31,13 +32,13 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     padding-left: 20px;
-    padding-right: 40px;
+    padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: transparent;
     font-family: Helvetica, sans-serif;
     color: #fff;
-    text-transform: capitalize;
+
     .nav__left {
       display: flex;
       justify-content: start;
@@ -52,6 +53,7 @@ header {
       }
     }
     .nav__right {
+      display: block;
       a {
         padding-right: 10px;
         text-transform: capitalize;
@@ -76,8 +78,88 @@ header {
         cursor: pointer;
       }
     }
-  }
+    .mobile {
+      width: 50%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: transparent;
+      font-family: Helvetica, sans-serif;
+      color: #fff;
+      text-transform: capitalize;
+      .nav__left-mobile {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        h1 {
+          text-transform: capitalize;
+          padding-left: 5px;
+          font-size: 25px;
+        }
+        h1:hover {
+          cursor: pointer;
+        }
+      }
+      .fa .fa-bars {
+        color: #fff;
+      }
+      .icon {
+        color: #fff;
+        background: transparent;
+        display: block;
+        font-size: 30px;
+      }
+      .far .fa-window-close {
+        color: #fff;
+      }
+      .icon-close {
+        color: #fff;
+        background: transparent;
+        display: none;
+        font-size: 30px;
+      }
+      .nav__right-mobile {
+        flex-direction: column;
+        display: none;
 
+        width: 100vw;
+        height: 100px;
+        //margin: 0 auto;
+        #logIn {
+          padding-top: 10px;
+        }
+        a {
+          width: 100%;
+          //margin: 0 auto;
+          text-align: center;
+          padding-top: 20px;
+          //padding-right: 15px;
+          text-transform: capitalize;
+          color: #fff;
+          //margin: 0px;
+          font-size: 14px;
+          text-decoration: none;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 10px;
+        }
+        a:hover {
+          cursor: pointer;
+          color: #d3d3d3;
+        }
+        .button__sign-in {
+          background-color: #087f8c;
+        }
+        .button__sign-in:hover {
+          color: #fff;
+          background-color: #095256;
+          cursor: pointer;
+        }
+      }
+    }
+  }
   .input {
     padding-top: 75px;
     max-width: 1000px;
@@ -106,13 +188,60 @@ header {
 @media (max-width: 950px) {
   header {
     nav {
+      padding-right: 20px;
     }
     .input {
       margin: 0 auto;
       max-width: 500px;
-
       input {
         width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    animation: none;
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../assets/images/eduardo-lages-N8mh2GCYI0s-unsplash.jpg");
+    nav {
+      .nav__left {
+      }
+      .nav__right {
+        display: none;
+      }
+      .mobile {
+        display: flex;
+        flex-direction: column;
+
+        .icon-close {
+          .far .fa-window-close {
+            display: none;
+          }
+        }
+        .nav__left-mobile {
+        }
+        .nav__right-mobile {
+          display: none;
+
+          width: 100%;
+
+          a {
+          }
+        }
+      }
+    }
+    .input {
+      margin: 0 auto;
+      max-width: 400px;
+      input {
+        width: 200px;
+        padding-right: 30px;
       }
     }
   }
