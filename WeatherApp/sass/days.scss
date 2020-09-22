@@ -122,3 +122,19 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .days {
+    .days__container {
+      width: 250px;
+      .day__container {
+        .day__title {
+        }
+        .weather__info {
+        }
+        .weather__details {
+        }
+      }
+    }
+  }
+}

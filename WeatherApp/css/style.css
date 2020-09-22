@@ -344,6 +344,23 @@ header {
         .current-weather .current__container .current-left-container .current__title .current__weather .current__info h1 {
           font-size: 50px; } }
 
+@media (max-width: 500px) {
+  .current-weather .current__container {
+    width: 300px; }
+    .current-weather .current__container .current-left-container .current__title .current__weather .weather__info h1 {
+      font-size: 50px; }
+      .current-weather .current__container .current-left-container .current__title .current__weather .weather__info h1 span {
+        font-size: 30px;
+        margin-left: -10px; }
+    .current-weather .current__container .current-left-container .current__title .current__weather .weather__info h2 {
+      font-size: 18px; }
+    .current-weather .current__container .current-right-container {
+      max-width: 300px; }
+      .current-weather .current__container .current-right-container .current__info {
+        width: 250px; }
+        .current-weather .current__container .current-right-container .current__info .wind-gusts p {
+          margin-left: 15px; } }
+
 .days {
   padding-left: 20px;
   padding-right: 20px;
@@ -438,6 +455,10 @@ header {
         max-width: 400px;
         height: 350px;
         margin-bottom: 15px; } }
+
+@media (max-width: 500px) {
+  .days .days__container {
+    width: 250px; } }
 
 .secondNav {
   display: none;

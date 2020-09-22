@@ -202,3 +202,42 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .current-weather {
+    .current__container {
+      width: 300px;
+      .current-left-container {
+        .current__title {
+          .current__weather {
+            .weather__info {
+              h1 {
+                font-size: 50px;
+                span {
+                  font-size: 30px;
+                  margin-left: -10px;
+                }
+              }
+              h2 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+      .current-right-container {
+        max-width: 300px;
+        .current__info {
+          width: 250px;
+          .wind-gusts {
+            h2 {
+            }
+            p {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
