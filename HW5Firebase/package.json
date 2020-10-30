@@ -1,0 +1,21 @@
+{
+  "name": "hw5firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local-serve": "firebase serve --only hosting",
+    "deploy-without-functions": "firebase deploy --except functions",
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3"
+  },
+  "dependencies": {
+    "node": "^15.0.1"
+  }
+}
